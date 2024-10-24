@@ -1,0 +1,50 @@
+/* Styles for spacing */
+.heading {
+  margin-top: 20px;
+}
+/* p span {
+  display: block;
+} */
+
+h3 {
+  text-decoration: underline;
+  margin-top: 30px;
+}
+.bullet-list {
+  list-style-type: circle;
+}
+.resume {
+  display: flex;
+  flex-direction: row;
+  margin: 5%;
+  font-size: 24px;
+}
+.skills {
+  display: flex;
+}
+
+@media screen and (min-width: 1200px) {
+  .skills {
+    display: none;
+  }
+}
+
+.skills-aside {
+  display: none;
+  font-size: 20px;
+}
+
+@media screen and (min-width: 1200px) {
+  .resume {
+    display: flex;
+    flex-direction: row;
+    margin: 2.5%;
+  }
+  .skills-aside {
+    display: inline;
+    margin-right: 2.5%;
+    background-color: rgb(4, 4, 82);
+    padding: 2.5%;
+    color: white;
+  }
+}

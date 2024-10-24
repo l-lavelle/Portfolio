@@ -1,0 +1,111 @@
+.responsive-about {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+.top-about {
+  width: 600px;
+  height: auto;
+  margin: 2.5%;
+}
+.top-about p span {
+  display: block;
+  margin: 5px 0;
+}
+.intro-text {
+  font-size: 30px;
+}
+.about-icon {
+  max-width: 45px;
+  margin: 0 2%;
+}
+.profile-pic {
+  width: 100%;
+  max-width: 500px;
+  border-radius: 30%;
+  height: auto;
+}
+.about-me {
+  margin: 3%;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 35px;
+}
+.clip-art {
+  width: 100%;
+  max-width: 500px;
+  height: auto;
+}
+
+/* Screen responsiveness laptop */
+@media screen and (min-width: 1200px) {
+  .responsive-about {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+  }
+  .top-about {
+    margin-right: 5%;
+  }
+  .about-me {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    justify-content: center;
+    margin: 0 5%;
+    margin-bottom: 35px;
+  }
+  .profile-pic {
+    width: 100%;
+    max-width: 650px;
+    border-radius: 30%;
+    height: auto;
+  }
+  .clip-art {
+    width: 500px;
+
+    height: auto;
+  }
+  .image-center {
+    margin-right: 6%;
+  }
+  .about-me p {
+    max-width: 650px;
+  }
+}
+.image-center {
+  text-align: center;
+}
+.circle {
+  background: lightblue;
+  border-radius: 50%;
+  width: 100px;
+  height: 100px;
+  max-width: 100px;
+  max-height: 100px;
+  bottom: 35px;
+  left: 50px;
+  position: absolute;
+}
+.trial {
+  position: relative;
+}
+.rectangle {
+  height: 30%;
+  width: 100vw;
+  background-color: #77a2de;
+  position: absolute;
+  z-index: -1;
+}
+.top-about div {
+  /* background: linear-gradient(110deg, #fdcd3b 60%, #ffed4b 60%); */
+  background: linear-gradient(to top, #295376 60%, white 60%);
+  border-radius: 30%;
+  max-width: 600px;
+  max-height: 800px;
+  padding: 2%;
+  z-index: -1;
+}

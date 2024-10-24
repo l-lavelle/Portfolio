@@ -1,0 +1,31 @@
+.footer {
+  background-color: white;
+  position: fixed;
+  width: 100%;
+  bottom: 0;
+  color: black;
+  font-size: 20px;
+  padding-top: 10px;
+}
+.footer div {
+  display: flex;
+  flex-direction: row;
+
+  justify-content: center;
+}
+#ft-contact {
+  margin-left: 25px;
+  margin-right: 10px;
+}
+.footer a {
+  align-items: center;
+  justify-content: center;
+}
+.github {
+  width: 30px;
+  height: 30px;
+}
+.linkedIn {
+  width: 40px;
+  height: 40px;
+}
