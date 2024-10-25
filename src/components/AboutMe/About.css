@@ -2,6 +2,10 @@
 .about-header {
   background-color: var(--blue);
   height: 400px;
+  display: flex;
+  flex-direction: row;
+  align-items: end;
+  overflow: hidden;
 }
 
 /* body {
@@ -135,17 +139,20 @@
     border-radius: 50%;
   }
 }
-/* Add the perspective and change opacity on stop */
+/* Need to make boxes smaller */
+/* Not responsive for smaller screen?? */
 .box-container {
-  perspective: 1000px;
+  animation: addPerspective 1s ease 7s forwards;
 }
 .container {
+  margin: 15px;
+  padding: 10px;
   width: 100px;
   height: 100px;
   position: relative;
   transform-style: preserve-3d;
-  perspective: 500px; /* Add perspective */
-  animation: rotate 20s linear;
+  /* perspective: 500px; Add perspective */
+  animation: rotate 8s linear, changePerspective 1s ease 7s forwards;
 }
 
 .face {
@@ -193,16 +200,16 @@
     opacity: 1;
   }
   50.1% {
-    opacity: 1;
+    opacity: 0.8;
   }
   66.8% {
-    opacity: 1;
+    opacity: 0.6;
   }
   83.5% {
-    opacity: 1;
+    opacity: 0.5;
   }
   100% {
-    opacity: 1;
+    opacity: 0.3;
   }
 }
 
@@ -231,6 +238,24 @@
   }
   100% {
     transform: rotateX(360deg) rotateY(360deg);
+  }
+}
+
+@keyframes addPerspective {
+  0% {
+    perspective: none;
+  }
+  100% {
+    perspective: 1000px;
+  }
+}
+
+@keyframes changePerspective {
+  0% {
+    perspective: none;
+  }
+  100% {
+    perspective: 500px;
   }
 }
 

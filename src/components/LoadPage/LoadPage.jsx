@@ -129,11 +129,16 @@ function RisingLetter({ letter, index }) {
 
 function LoadPage() {
   const navigate = useNavigate()
+  // useEffect(()=>{
+  //     setTimeout(()=>{
+  //           navigate('/About')
+  //       }, 10000)
+  //   }, [])
   useEffect(()=>{
-      setTimeout(()=>{
-            navigate('/About')
-        }, 10000)
-    }, [])
+    setTimeout(()=>{
+          navigate('/About')
+      }, 100)
+  }, [])
 
     return (
       <>
