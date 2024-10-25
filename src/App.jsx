@@ -4,6 +4,7 @@ import NavBar from './components/navBar/navBar';
 import Footer from './components/Footer/Footer';
 import { useEffect,useState } from 'react';
 import './App.css';
+import './root.css';
 
 function App() {
     const [loadingPage, setLoadingPage] = useState(true);
