@@ -24,7 +24,7 @@ export default function NavBar() {
                   to="/"
                   className={currentPage === '/' ? 'nav-link ll-font active' : 'nav-link ll-font'}
                 >
-                  Lauren Lavelle
+                  LoTechHub
               </Link>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -52,7 +52,7 @@ export default function NavBar() {
                     to="/Resume"
                     className={currentPage === '/Resume' ? 'nav-link active' : 'nav-link'}
                   >
-                    Resume
+                    Contact
                 </Link>
               </li>
             </ul>

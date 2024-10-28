@@ -1,36 +1,55 @@
-/* @import url("https://fonts.googleapis.com/css?family=Exo:400,700"); */
 .about-header {
   background-color: var(--blue);
-  height: 400px;
+  height: 600px;
   display: flex;
   flex-direction: row;
-  align-items: end;
+  align-items: center;
+  justify-content: center;
   overflow: hidden;
 }
-
-/* body {
-  font-family: "Exo", sans-serif;
-} */
-
-/* .context {
-  width: 100%;
-  position: absolute;
-  top: 50vh;
+/* Fade in H1 */
+.fade-in-text {
+  opacity: 0;
+  position: relative;
+  top: -20px;
+  animation: fadeInFromTop 2s forwards 3s;
 }
 
-.context h1 {
-  text-align: center;
-  color: #fff;
-  font-size: 50px;
-} */
+@keyframes fadeInFromTop {
+  to {
+    opacity: 1;
+    top: 0;
+  }
+}
+.typewriter {
+  display: inline-block;
+  overflow: hidden;
+  border-right: 0.15em solid orange; /* Adjust as needed */
+  white-space: nowrap;
+  opacity: 0;
+  animation: typing 3.5s steps(30, end) 5s forwards,
+    blink-caret 0.75s step-end 5s;
+}
+@keyframes typing {
+  from {
+    width: 0;
+    opacity: 1;
+  }
+  to {
+    width: 100%;
+    opacity: 1;
+  }
+}
 
-/* .area {
-  background: #4e54c8;
-  background: -webkit-linear-gradient(to left, #8f94fb, #4e54c8);
-  width: 100%;
-  height: 100vh;
-} */
-
+@keyframes blink-caret {
+  from,
+  to {
+    border-color: transparent;
+  }
+  50% {
+    border-color: var(--dark-blue);
+  }
+}
 .circles {
   position: absolute;
   top: 0;
@@ -152,9 +171,17 @@
   position: relative;
   transform-style: preserve-3d;
   /* perspective: 500px; Add perspective */
+  /* animation: rotate 8s linear, changePerspective 1s ease 7s forwards; */
+}
+.box1 {
+  animation: rotate 8s linear 3s, changePerspective 1s ease 10s forwards;
+}
+.box2 {
+  animation: rotate 8s linear 2s, changePerspective 1s ease 9s forwards;
+}
+.box3 {
   animation: rotate 8s linear, changePerspective 1s ease 7s forwards;
 }
-
 .face {
   position: absolute;
   width: 100px;
@@ -165,38 +192,32 @@
 }
 
 .front {
-  background-color: purple;
+  background-color: #a3ffd6;
   transform: translateZ(50px);
 }
 .back {
-  background-color: black;
+  background-color: #1d167876;
   transform: rotateY(180deg) translateZ(50px);
 }
 .right {
-  background-color: red;
+  background-color: #1c1678;
   transform: rotateY(90deg) translateZ(50px);
 }
 .left {
-  background-color: blue;
+  background-color: #1c1678;
   transform: rotateY(-90deg) translateZ(50px);
 }
 .top {
-  background-color: green;
+  background-color: #8576ff;
   transform: rotateX(90deg) translateZ(50px);
 }
 .bottom {
-  background-color: yellow;
+  background-color: #8576ff;
   transform: rotateX(-90deg) translateZ(50px);
 }
 
 @keyframes buildBox {
   0% {
-    opacity: 1;
-  }
-  16.7% {
-    opacity: 1;
-  }
-  33.4% {
     opacity: 1;
   }
   50.1% {
@@ -209,12 +230,28 @@
     opacity: 0.5;
   }
   100% {
-    opacity: 0.3;
+    opacity: 0.5;
   }
 }
-
+@keyframes buildBoxFront {
+  0% {
+    opacity: 1;
+  }
+  50.1% {
+    opacity: 0.8;
+  }
+  66.8% {
+    opacity: 0.6;
+  }
+  83.5% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 0;
+  }
+}
 .front {
-  animation: buildBox 6s ease-in-out 0s 1 normal forwards;
+  animation: buildBoxFront 6s ease-in-out 0s 1 normal forwards;
 }
 .back {
   animation: buildBox 6s ease-in-out 1s 1 normal forwards;
@@ -360,14 +397,5 @@
   width: 100vw;
   background-color: #77a2de;
   position: absolute;
-  z-index: -1;
-}
-.top-about div {
-  /* background: linear-gradient(110deg, #fdcd3b 60%, #ffed4b 60%); */
-  background: linear-gradient(to top, #295376 60%, white 60%);
-  border-radius: 30%;
-  max-width: 600px;
-  max-height: 800px;
-  padding: 2%;
   z-index: -1;
 }

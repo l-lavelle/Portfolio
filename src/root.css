@@ -7,3 +7,9 @@
   --off-white: #f8f8f8;
   --black: #000000;
 }
+h1 {
+  font-size: 5em;
+}
+h2 {
+  font-size: 3em;
+}

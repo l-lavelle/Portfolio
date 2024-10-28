@@ -11,14 +11,11 @@ import{
   Float
 } from '@react-three/drei';
 import fontJson from '../../assets/typeface.json';
-import Baskerville from '../../assets/Baskerville.json';
-import Nunito from '../../assets/Nunito-Sans.json';
-import Kantumruy from '../../assets/Kantumruy.json'
 
 // Full Name Drops 
 function AnimatedText5() {
-  const letters = "Lauren".split("");
-  const lastName ="Lavelle".split("");
+  const letters = "Lo Tech".split("");
+  const lastName ="Hub".split("");
 
   return (
     <div style={{ width: "100vw", height: "80vh" }} >
@@ -108,7 +105,7 @@ function RisingLetter({ letter, index }) {
   };
 
   return (
-    <Center scale={[1, 1, .7]} position={[index -3.3, 0, 0]} front top>
+    <Center scale={[1, 1, .7]} position={[index -2, 0, 0]} front top>
       <Text3D
         ref={ref}
         font={fontJson}
@@ -129,25 +126,20 @@ function RisingLetter({ letter, index }) {
 
 function LoadPage() {
   const navigate = useNavigate()
-  // useEffect(()=>{
-  //     setTimeout(()=>{
-  //           navigate('/About')
-  //       }, 10000)
-  //   }, [])
   useEffect(()=>{
     setTimeout(()=>{
           navigate('/About')
-      }, 100)
+      }, 10000)
   }, [])
 
-    return (
-      <>
-        <AnimatedText5 />
-      </>
-    );
-  }
+  return (
+    <>
+      <AnimatedText5 />
+    </>
+  );
+}
   
-  export default LoadPage;
+export default LoadPage;
 
 
 
